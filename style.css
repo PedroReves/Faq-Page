@@ -15,12 +15,17 @@
   --font: "Work Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   min-height: 100dvh;
   width: 100dvw;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   font-family: var(--font);
   font-size: 16px;
   background: url(./assets/images/background-pattern-desktop.svg) top center fixed no-repeat;
@@ -105,9 +110,19 @@ body {
   display: block;
 }
 
+.attribution {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+}
+
 @media (max-width: 375px) {
   body {
     background: url(./assets/images/background-pattern-mobile.svg) top center fixed no-repeat;
+  }
+
+  .attribution {
+    display: none;
   }
 
   .container {
